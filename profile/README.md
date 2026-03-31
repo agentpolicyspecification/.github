@@ -18,20 +18,25 @@ Current approaches to safety and control are fragmented: guardrails are baked in
 
 APS specifies three interception points in the agent–LLM interaction lifecycle:
 
-```
-User / System
-     │
-     ▼
-┌─────────────────────────────┐
-│        APS Policy Layer      │
-│                              │
-│  ① Input Policy Enforcement  │  ← messages before they reach the LLM
-│  ② Tool Call Enforcement     │  ← tool invocations before execution
-│  ③ Output Policy Enforcement │  ← model responses before delivery
-└─────────────────────────────┘
-     │
-     ▼
-   Agent / LLM Runtime
+```mermaid
+flowchart TD
+    U(["User / System"])
+    U --> I
+
+    subgraph APS ["APS Policy Layer"]
+        I["① Input Policy Enforcement
+            ─────────────────────────
+            messages before they reach the LLM"]
+        T["② Tool Call Enforcement
+            ─────────────────────────
+            tool invocations before execution"]
+        O["③ Output Policy Enforcement
+            ─────────────────────────
+            model responses before delivery"]
+        I --> T --> O
+    end
+
+    O --> R(["Agent / LLM Runtime"])
 ```
 
 For each interception point, APS defines:
