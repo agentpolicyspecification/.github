@@ -69,7 +69,7 @@ For each interception point, APS defines:
 APS supports two complementary policy authoring models:
 
 - **Rego policies** — declarative rules evaluated against structured input, compatible with [Open Policy Agent](https://www.openpolicyagent.org/)
-- **Programmatic rules** — typed interfaces (Java, TypeScript) for policies that require imperative logic or external I/O
+- **Runtime rules** — typed interfaces (Java, TypeScript) for policies that require imperative logic or external I/O
 
 ---
 
