@@ -1,3 +1,20 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="aps-readme-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="aps-readme-light.svg">
+    <img alt="Agent Policy Specification" src="aps-readme-light.svg">
+  </picture>
+</p>
+
+![Version](https://img.shields.io/badge/version-0.1.0-blue)
+![Status](https://img.shields.io/badge/status-draft-orange)
+![License](https://img.shields.io/github/license/agentpolicyspecification/.github)
+![Docs](https://img.shields.io/badge/docs-available-brightgreen)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Contributors](https://img.shields.io/github/contributors/agentpolicyspecification/.github)
+![Stars](https://img.shields.io/github/stars/agentpolicyspecification?style=social)
+![Open Specification](https://img.shields.io/badge/Open-Specification-blueviolet)
+
 # Agent Policy Specification (APS)
 
 **A vendor-neutral specification for enforcing policies on AI agent interactions.**
