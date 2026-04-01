@@ -66,10 +66,16 @@ For each interception point, APS defines:
 
 ## Policy Authoring
 
-APS supports two complementary policy authoring models:
+APS is designed to be extensible. The specification defines the interception contract — not the policy language. Any engine that can receive a context and return a decision can implement an APS policy. Current authoring models include:
 
-- **Rego policies** — declarative rules evaluated against structured input, compatible with [Open Policy Agent](https://www.openpolicyagent.org/)
-- **Runtime rules** — typed interfaces (Java, TypeScript) for policies that require imperative logic or external I/O
+| Model | Description |
+|---|---|
+| **Rego (WASM)** | Declarative OPA policies compiled to WebAssembly and evaluated in-process |
+| **OPA (REST)** | Policies evaluated by a running OPA server via its HTTP API |
+| **Runtime** | Typed interfaces in TypeScript or Java for policies requiring imperative logic or external I/O |
+| **DSL** | Custom domain-specific languages — bring your own policy syntax, backed by any evaluator |
+
+New authoring models can be added without changes to the core specification.
 
 ---
 
